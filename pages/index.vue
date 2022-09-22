@@ -87,7 +87,134 @@
           </div>
         </div>
       </div>
-      <div class="meetTeam"></div>
+      <div class="meetTeam">
+        <h3>Meet The Team</h3>
+        <p>
+          We are a group of individuals that share common ground as you do, we
+          understand your fears and frustration, join us to start
+        </p>
+        <div class="members">
+          <div class="member">
+            <img
+              src="../static/images/member1.png"
+              alt=""
+              srcset=""
+              class="member_img"
+            />
+            <div class="card">
+              <div class="cdContent">
+                <h4>Johnson</h4>
+                <p>Team lead</p>
+              </div>
+            </div>
+            <img
+              class="linkedIn"
+              src="../static/images/linkedin-in.svg"
+              alt=""
+            />
+          </div>
+          <div class="member">
+            <img
+              src="../static/images/member2.png"
+              alt=""
+              srcset=""
+              class="member_img"
+            />
+            <div class="card">
+              <div class="cdContent">
+                <h4>Mary</h4>
+                <p>Team lead</p>
+              </div>
+            </div>
+            <img
+              class="linkedIn"
+              src="../static/images/linkedin-in.svg"
+              alt=""
+            />
+          </div>
+          <div class="member">
+            <img
+              src="../static/images/member3.png"
+              alt=""
+              srcset=""
+              class="member_img"
+            />
+            <div class="card">
+              <div class="cdContent">
+                <h4>Nessa</h4>
+                <p>Team lead</p>
+              </div>
+            </div>
+            <img
+              class="linkedIn"
+              src="../static/images/linkedin-in.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="faq">
+        <h4>Frequently Asked question</h4>
+        <div class="faqCon">
+          <div class="faqConBox">
+            <h5>How do I get started?</h5>
+            <img src="../static/images/plus_sign.svg" alt="" />
+          </div>
+          <div class="faqConBox">
+            <h5>How do I get started?</h5>
+            <img src="../static/images/plus_sign.svg" alt="" />
+          </div>
+          <div class="faqConBox">
+            <h5>How do I get started?</h5>
+            <img src="../static/images/plus_sign.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="readArticle">
+        <h4>Read helpful articles</h4>
+        <p>
+          We are a group of individuals that share common ground as you do, we
+          understand your fears and frustration, join us to start
+        </p>
+      </div>
+      <div class="articles">
+        <div class="articleCon">
+          <div class="articleCard">
+            <img src="../static/images/smoking.png" alt="" srcset="" />
+            <h5>Danges of Ciger</h5>
+            <p>
+              We are a group of individuals that share common ground as you do,
+              we understand your fears and frustration, join us to start
+            </p>
+            <p id="color_link">Team link</p>
+          </div>
+          <div class="articleCard">
+            <img src="../static/images/smoking.png" alt="" srcset="" />
+            <h5>Danges of Ciger</h5>
+            <p>
+              We are a group of individuals that share common ground as you do,
+              we understand your fears and frustration, join us to start
+            </p>
+            <p id="color_link">Team link</p>
+          </div>
+          <div class="articleCard">
+            <img src="../static/images/smoking.png" alt="" srcset="" />
+            <h5>Danges of Ciger</h5>
+            <p>
+              We are a group of individuals that share common ground as you do,
+              we understand your fears and frustration, join us to start
+            </p>
+            <p id="color_link">Team link</p>
+          </div>
+        </div>
+        <button>More Articles</button>
+      </div>
+      <div class="finalNote">
+        <h4>"You can do it"</h4>
+      </div>
+      <div class="footer">
+        <nav-bar />
+      </div>
     </section>
   </div>
 </template>
@@ -127,9 +254,7 @@ export default {
     #fff,
     hsl(173, 81%, 94%),
     hsl(236, 76%, 92%),
-    hsl(41, 100%, 94%),
-    hsl(173, 94%, 87%),
-    hsl(235, 83%, 88%)
+    hsl(41, 100%, 94%)
   );
   // hsl(43, 91%, 86%)
   // opacity: 0.5;
@@ -183,7 +308,7 @@ export default {
     }
     .theTalk {
       width: 70%;
-      margin: 2rem auto 2px;
+      margin: 2rem auto 5rem;
       font-size: 42px;
       text-align: center;
       line-height: 100%;
@@ -238,7 +363,7 @@ export default {
     }
   }
   .accolades {
-    background-image: url('../static/images/acc_background.svg');
+    background: #1f222b;
     background-repeat: no-repeat;
     // background-size: fill;
     width: 100%;
@@ -247,7 +372,8 @@ export default {
     justify-content: center;
     padding: 4rem 0px;
     color: #fff;
-    height: 70vh;
+    height: 40vh;
+    position: relative;
     .acc_cont {
       display: flex;
       flex-direction: row;
@@ -263,8 +389,303 @@ export default {
       }
     }
   }
+  .accolades::before {
+    content: '';
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: #1f222b;
+    transform: skewY(5deg);
+  }
+  .accolades::after {
+    content: '';
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: #1f222b;
+    transform: skewY(-5deg);
+  }
   .meetTeam {
-    height: 20vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    h3 {
+      color: #000;
+      text-align: center;
+      font-size: 48px;
+      width: 80%;
+      margin: 5rem auto 1rem;
+    }
+    p {
+      text-align: center;
+      width: 40%;
+      margin: 0 auto;
+    }
+    .members {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .member {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        padding: 10rem 0 3rem;
+        position: relative;
+        .member_img {
+          width: 80%;
+          height: 250px;
+          margin: 0px auto;
+          border-radius: 110px;
+          position: absolute;
+          top: 7%;
+          z-index: 1;
+        }
+        .card {
+          background: url('../static/images/background.png');
+          box-shadow: -4px 6px 20px hsla(161, 100%, 44%, 0.2),
+            -4px 6px 20px hsla(238, 99%, 58%, 0.2);
+          // background-position: 0px 0px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 250px;
+          height: 350px;
+          border-radius: 300px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          color: #fff;
+          .cdContent {
+            width: 80%;
+            height: 100%;
+            margin: 0px auto;
+            background-image: url('../static/images/hero_background.png');
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            h4 {
+              margin-top: 5rem;
+              font-size: 32px;
+            }
+          }
+        }
+        .linkedIn {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  .meetTeam::before {
+    content: '';
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: #1f222b;
+    transform: skewY(-5deg);
+  }
+  .meetTeam::after {
+    content: '';
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: #1f222b;
+    transform: skewY(5deg);
+  }
+  .faq {
+    text-align: center;
+    h4 {
+      font-size: 38px;
+    }
+    .faqCon {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding: 2rem 0px;
+      width: 40%;
+      margin: 0 auto;
+      .faqConBox {
+        width: 100%;
+        padding: 12px 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 8px;
+        border: 1px solid #1f222b;
+        h5 {
+          font-size: 24px;
+        }
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+  .readArticle {
+    padding: 5rem 0px 10rem;
+    h4,
+    p {
+      width: 40%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h4 {
+      font-size: 40px;
+    }
+  }
+  .articles {
+    width: 100%;
+    background-color: #1f222b;
+    color: #fff;
+    display: flex;
+    padding: 5rem 0px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .articleCon {
+      padding: 3rem 0px;
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .articleCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img,
+        h5,
+        p {
+          width: 80%;
+        }
+        img {
+          border-radius: 4px;
+          margin: 8px 0px 16px;
+        }
+        h5 {
+          margin: 4px 0px;
+          font-weight: bold;
+          font-size: 18px;
+        }
+        p {
+          margin: 8px 0px;
+        }
+        p#color_link {
+          color: #03ffe0;
+          font-family: 'Montserrat', sans-serif;
+        }
+      }
+    }
+    button {
+      text-align: center;
+      background-color: #3d92a2;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      width: fit-content;
+      height: fit-content;
+      padding: 8px 24px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+    }
+  }
+  .articles::before {
+    content: '';
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: #1f222b;
+    transform: skewY(5deg);
+  }
+  .articles::after {
+    content: '';
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: #1f222b;
+    transform: skewY(-5deg);
+  }
+  .finalNote {
+    background: linear-gradient(hsl(173, 81%, 94%), hsl(236, 76%, 92%));
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      text-align: center;
+      font-size: 32px;
+    }
+  }
+  .finalNote::before {
+    content: '';
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: #1f222b;
+    transform: skewY(-5deg);
+  }
+  .finalNote::after {
+    content: '';
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: #1f222b;
+    transform: skewY(5deg);
+  }
+  .footer {
+    width: 100%;
+    background-color: #1f222b;
+    position: relative;
+    padding-bottom: 5rem;
+  }
+  .footer::before {
+    content: '';
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: #1f222b;
+    transform: skewY(5deg);
+  }
+  .footer::after {
+    content: '';
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: #1f222b;
+    transform: skewY(-5deg);
   }
 }
 </style>
